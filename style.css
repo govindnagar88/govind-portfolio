@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #000;
+}
+
+.portfolio-container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+.navlist {
+  display: flex;
+  gap: 3.5rem;
+  height: 15vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 2;
+}
+
+.navlist li {
+  list-style: none;
+}
+
+.navlist li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: beige;
+  position: relative;
+}
+
+.navlist li a::after, .navlist .active::after {
+  content: "";
+  position: absolute;
+  background: #fff;
+  width: 100%;
+  height: 0.1rem;
+  left: 0;
+  bottom: -5px;
+  transform: scale(0);
+  transform-origin: bottom right;
+  transition: transform 0.5s;
+}
+
+.navlist li a:hover::after, .navlist .active::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.left-container, .right-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.left-container {
+  background: #262525;
+  width: 70%;
+  padding: 3rem;
+  display: flex;
+}
+
+.right-container {
+  background: linear-gradient(-45deg, #3877FF, #262525 70%);
+  width: 30%;
+}
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.icons .fa-brands {
+  color: aliceblue;
+  font-size: 1.7rem;
+  transition: 0.3s ease;
+}
+
+.icons .fa-brands:hover {
+  cursor: pointer;
+  background: linear-gradient(#fff, #3877FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.content {
+  margin-left: 4rem;
+}
+
+.content .intro {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.content .intro span {
+  color: #5DB9EE;
+}
+
+.content h1 {
+  font-size: 4rem;
+  color: #5DB9EE;
+}
+
+.content .detail {
+  font-size: 1.1rem;
+  color: #fff;
+  max-width: 38rem;
+  margin: 1.1rem 0 3rem 0;
+  line-height: 1.8rem;
+}
+
+.btn-container {
+  display: flex;
+  gap: 2rem;
+}
+
+.btn-container button {
+  font-size: 1.1rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  color: #fff;
+  border: none;
+  background: linear-gradient(270deg, #4164b1, rgb(175, 38, 38), rgb(179, 49, 179), rgb(222, 112, 112), rgb(61, 184, 61), #5DB9EE);
+  background-size: 600% 600%;
+  animation: animatedGradient 8s ease infinite;
+  transition: transform 0.5s ease;
+}
+
+.btn-container button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #5DB9EE;
+}
+
+@keyframes animatedGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.design .circle {
+  aspect-ratio: 1;
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+}
+
+.circle:nth-child(1) {
+  background: linear-gradient(90deg, transparent 50%, #262525 50%);
+  width: 38rem;
+}
+
+.circle:nth-child(2) {
+  width: 30rem;
+  background-image: url("image/WhatsApp Image 2025-04-18 at 23.15.16_8183aee4.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 0.1rem solid white;
+  box-shadow:
+    0 0 1rem #fff,
+    inset 0 0 1rem #7382d4,
+    0 0 2rem #3877FF,
+    inset 0 0 2rem #3f5c9b,
+    0 0 4rem #3877FF,
+    inset 0 0 4rem;
+}
